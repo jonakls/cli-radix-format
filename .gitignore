@@ -294,3 +294,7 @@
 /.idea/inspectionProfiles/Project_Default.xml
 /.idea/vcs.xml
 /.idea/workspace.xml
+/.idea/.gitignore
+/.idea/cli-radix-format.iml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml

@@ -1,7 +1,6 @@
 import numpy as np
 
-from organizer.manager.radix import RadixLongManager
-from organizer.manager.radix import RadixShortManager
+from organizer.manager import RadixShortManager, RadixLongManager
 from organizer.util import FormatUtil
 
 

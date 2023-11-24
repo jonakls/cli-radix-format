@@ -1,8 +1,8 @@
 import time
 
-from organizer import serialize as Serializer
-from organizer.manager.radix import RadixFormatManager
-from organizer.util import DataFrameUtil
+import manager.RadixFormatManager as RadixFormatManager
+from serializer import CSVSerializer as Serializer
+from util import DataFrameUtil
 
 
 def init_dataframe(data_frame):
@@ -32,6 +32,6 @@ def init_path(input_path, output_path):
 
 
 init_path(
-    "G:\\Mi unidad\\TRABAJO\\VERIFICACION\\NOVIEMBRE\\15\\Inclusiones Banco Davivienda BPJ - Noviembre\\rad.xlsx",
-    "G:\\Mi unidad\\TRABAJO\\VERIFICACION\\NOVIEMBRE\\15\\Inclusiones Banco Davivienda BPJ - Noviembre\\results.csv"
+    "C:\\Users\\jonakls\\OneDrive - LITIGAR PUNTO COM S.A\\Inclusiones\\PROCESAR\\2023\\NOVIEMBRE\\23\\INCLUIR BANCOOMEVA NOV 2023\\RAD_EJE.xlsx",
+    "C:\\Users\\jonakls\\OneDrive - LITIGAR PUNTO COM S.A\\Inclusiones\\PROCESAR\\2023\\NOVIEMBRE\\23\\INCLUIR BANCOOMEVA NOV 2023\\RESULTADOS.csv"
 )

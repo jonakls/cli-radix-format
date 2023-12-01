@@ -1,7 +1,5 @@
-from organizer.util import FormatUtil
-
-
 def format_c9(value):
+    from radix_organizer.util import FormatUtil
     clean_value = FormatUtil.clean_numbers(value)
 
     generic_value = generic_format(clean_value)
@@ -15,6 +13,7 @@ def format_c9(value):
 
 
 def format_c10(value):
+    from radix_organizer.util import FormatUtil
     clean_value = FormatUtil.clean_numbers(value)
 
     generic_value = generic_format(clean_value)
@@ -28,6 +27,7 @@ def format_c10(value):
 
 
 def generic_format(value):
+    from radix_organizer.util import FormatUtil
     clean_value = FormatUtil.clean_numbers(value)
 
     year = FormatUtil.extract_year(clean_value)

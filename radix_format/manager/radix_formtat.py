@@ -1,10 +1,10 @@
 import numpy as np
 
-from organizer.manager import RadixShortManager, RadixLongManager
-from organizer.util import FormatUtil
-
 
 def init_format(data_frame):
+    from radix_organizer.manager import radix_short
+    from radix_organizer.manager import radix_long
+    from radix_organizer.util import FormatUtil
     if data_frame is None:
         raise Exception('No se ha cargado ningún archivo o simplemente hubo un error al cargarlo.')
 
@@ -43,12 +43,12 @@ def init_format(data_frame):
         data_frame.at[index, 'RADICADO_VIRGEN'] = str("." + clean_value)
         data_frame.at[index, 'LARGO_RADICADO_VIRGEN'] = str(clean_value).__len__()
         if FormatUtil.is_short(value):
-            format_value_c9 = RadixShortManager.format_c9(value)
-            format_value_c10 = RadixShortManager.format_c10(value)
+            format_value_c9 = radix_short.format_c9(value)
+            format_value_c10 = radix_short.format_c10(value)
             set_values(data_frame, index, format_value_c9, format_value_c10)
         elif FormatUtil.is_long(value):
-            format_value_c9 = RadixLongManager.format_c9(value)
-            format_value_c10 = RadixLongManager.format_c10(value)
+            format_value_c9 = radix_long.format_c9(value)
+            format_value_c10 = radix_long.format_c10(value)
             set_values(data_frame, index, format_value_c9, format_value_c10)
         else:
             set_values(data_frame, index, '0', '0')

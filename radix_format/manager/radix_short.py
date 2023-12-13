@@ -21,27 +21,27 @@ def format_c10(value):
 
 
 def generic_format(value):
-    from radix_organizer.util import FormatUtil
-    clean_value = FormatUtil.clean_numbers(value)
+    from radix_format.util import format_util
+    clean_value = format_util.clean_numbers(value)
 
     if len(str(clean_value)) <= 10:
-        year = FormatUtil.extract_year(value)
+        year = format_util.extract_year(value)
         if year is None:
             return None
 
         if not isinstance(year, list):
             clean_value = clean_value.replace(year, "")
-            process = FormatUtil.extract_process(clean_value)
+            process = format_util.extract_process(clean_value)
         else:
             clean_value = clean_value.replace(year[1], "")
             year = year[0]
-            process = FormatUtil.extract_process(clean_value)
+            process = format_util.extract_process(clean_value)
 
         if process is None:
             return None
         return [year, process]
 
-    year = FormatUtil.extract_year(clean_value)
+    year = format_util.extract_year(clean_value)
     if year is None:
         return None
     clean_value = clean_value.replace(year, "")
